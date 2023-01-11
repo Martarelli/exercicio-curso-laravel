@@ -1,1 +1,1 @@
-<h3>Você escolheu o pokemon: {{$nome}}</h3>
+<h3>Você escolheu o Pokemon: {{$nome}}</h3>
