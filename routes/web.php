@@ -15,3 +15,6 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/pokemon/{nome}', [HomeController::class, 'pokemon']);
+
+Route::get('/calculadora', [HomeController::class, 'calculadora']);
+Route::post('/calcular', [HomeController::class, 'calcular']);
