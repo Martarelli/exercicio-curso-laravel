@@ -27,4 +27,13 @@ class PlaceController extends Controller
 
         return redirect('/places');
     }
+    public function show($id)
+    {
+        $product = Product::find($id);
+
+        return view(
+        'products.show',
+        compact('product')
+        );
+    }
 }
