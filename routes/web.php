@@ -14,7 +14,9 @@ use App\Http\Controllers\PlaceController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function(){
+    return 'WORKING';
+});
 Route::get('/pokemon/{nome}', [HomeController::class, 'pokemon']);
 
 Route::get('/calculadora', [HomeController::class, 'calculadora']);
