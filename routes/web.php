@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PlaceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ Route::get('/pokemon/{nome}', [HomeController::class, 'pokemon']);
 
 Route::get('/calculadora', [HomeController::class, 'calculadora']);
 Route::post('/calcular', [HomeController::class, 'calcular']);
+
+Route::get('/places', [PlaceController::class, 'places']);
