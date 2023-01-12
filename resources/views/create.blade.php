@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Criar Local</h1>
     <form action="/places/store" method="POST">
         @csrf
         <input type="text" name="name" placeholder="Digite o nome...">

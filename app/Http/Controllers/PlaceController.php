@@ -25,6 +25,6 @@ class PlaceController extends Controller
             'address' => $request -> address
          ]);
 
-        return redirect('/');
+        return redirect('/places');
     }
 }
