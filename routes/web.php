@@ -26,3 +26,5 @@ Route::get('/places', [PlaceController::class, 'places']);
 
 Route::get('/places/create', [PlaceController::class, 'create']);
 Route::post('/places/store', [PlaceController::class, 'store']);
+
+Route::get('/places/show/{id}', [PlaceController::class, 'show']);

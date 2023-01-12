@@ -29,11 +29,8 @@ class PlaceController extends Controller
     }
     public function show($id)
     {
-        $product = Product::find($id);
+        $place = Place::find($id);
 
-        return view(
-        'products.show',
-        compact('product')
-        );
+        return view('show', compact('place'));
     }
 }
