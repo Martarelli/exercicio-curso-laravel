@@ -10,4 +10,9 @@ class PlaceController extends Controller
     {
         return view('places');
     }
+
+    public function create()
+    {
+        return view('create');
+    }
 }

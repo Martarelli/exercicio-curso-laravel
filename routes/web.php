@@ -23,3 +23,6 @@ Route::get('/calculadora', [HomeController::class, 'calculadora']);
 Route::post('/calcular', [HomeController::class, 'calcular']);
 
 Route::get('/places', [PlaceController::class, 'places']);
+
+Route::get('/places/create', [PlaceController::class, 'create']);
+Route::post('/places/store', [PlaceController::class, 'store']);
