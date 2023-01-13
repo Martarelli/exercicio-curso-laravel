@@ -18,11 +18,15 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function(){
     return 'WORKING';
 });
+
+//EXERCICIO POKEMON
 Route::get('/pokemon/{nome}', [HomeController::class, 'pokemon']);
 
+//EXERCICIO CALCULADORA
 Route::get('/calculadora', [HomeController::class, 'calculadora']);
 Route::post('/calcular', [HomeController::class, 'calcular']);
 
+//EXERCICIO PLACES
 Route::get('/places', [PlaceController::class, 'places']);
 
 Route::get('/places/create', [PlaceController::class, 'create']);
@@ -33,6 +37,9 @@ Route::get('/places/edit/{id}', [PlaceController::class, 'edit']);
 Route::post('/places/update/{id}', [PlaceController::class, 'update']);
 Route::get('/places/delete/{id}', [PlaceController::class, 'delete']);
 
-Route::get('/contact', [ContactController::class, 'contact']);
+//EXERCICIO CONTACT
+Route::get('/contacts', [ContactController::class, 'contacts']);
+Route::get('/contacts/create', [ContactController::class, 'create']);
+Route::post('/contacts/store', [ContactController::class, 'store']);
 
 
