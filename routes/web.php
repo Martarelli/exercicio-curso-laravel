@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlaceController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::get('/places/show/{id}', [PlaceController::class, 'show']);
 Route::get('/places/edit/{id}', [PlaceController::class, 'edit']);
 Route::post('/places/update/{id}', [PlaceController::class, 'update']);
 Route::get('/places/delete/{id}', [PlaceController::class, 'delete']);
+
+Route::get('/contact', [ContactController::class, 'contact']);
+
+
