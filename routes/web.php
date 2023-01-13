@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/contacts', [ContactController::class, 'contacts']);
     Route::get('/contacts/create', [ContactController::class, 'create']);
     Route::post('/contacts/store', [ContactController::class, 'store']);
+    Route::get('/contacts/show/{id}', [ContactController::class, 'show']);
 });
 
 
