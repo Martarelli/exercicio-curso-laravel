@@ -21,11 +21,12 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        $userID = Auth::id;
         Contact::create([
            'name' => $request -> name,
            'email' => $request -> email,
            'phone' => $request -> phone,
-           'user_id' => 0
+           'user_id' => $userID
         ]);
 
         return redirect('/contacts');

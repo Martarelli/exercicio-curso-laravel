@@ -14,5 +14,6 @@
         <input type="password" name="password" placeholder="Senha">
         <button type="submit">Enviar</button>
     </form>
+    <a href="/register">Registrar</a>
 </body>
 </html>
