@@ -10,7 +10,8 @@ class ContactController extends Controller
 {
     public function contacts()
     {
-        $contacts = Contact::all();
+        $userID = Auth::id();
+        $contacts = Contact::where('user_id', $userID)->get();
 
         return view('contact.index', compact('contacts'));
     }
