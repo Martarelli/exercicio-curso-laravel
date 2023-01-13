@@ -60,11 +60,11 @@ class ContactController extends Controller
 
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
+        $product = Contact::find($id);
         $product -> update([
            'name' => $request -> name,
-           'description' => $request -> description,
-           'price' => $request -> price
+           'email' => $request -> email,
+           'phone' => $request -> phon
         ]);
 
         return redirect('/show/' . $id);
@@ -72,10 +72,10 @@ class ContactController extends Controller
 
     public function destroy($id)
     {
-        $product = Product::find($id);
-        $product -> delete();
+        $contact = Contact::find($id);
+        $contact -> delete();
 
-        return redirect('/');
+        return redirect('/contacts');
     }
 
 }
