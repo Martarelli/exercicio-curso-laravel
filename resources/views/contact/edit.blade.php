@@ -7,7 +7,7 @@
     <title>Contact</title>
 </head>
 <body>
-    <h1>Editar Local</h1>
+    <h1>Editar Contato</h1>
     <form action="/contacts/update/{{$contact -> id}}" method="POST">
         @csrf
         <input type="text" name="name" value="{{$contact -> name}}" placeholder="Digite o nome...">
@@ -15,6 +15,9 @@
         <input type="text" name="phone" value="{{$contact -> phone}}" placeholder="Digite o telefone...">
         <button type="submit">Enviar</button>
     </form>
-    <a href="/contacts/delete/{{$id}}">Deletar</a>
+    <form action="/contacts/destroy/{{$contact -> id}}" method="post">
+        @csrf
+        <button type="submit">Deletar</button>
+    </form>
 </body>
 </html>

@@ -55,19 +55,26 @@ class ContactController extends Controller
         {
            return view('contact.edit', compact('contact'));
         }
-            return redirect('404');
+        return redirect('404');
     }
 
     public function update(Request $request, $id)
     {
-        $product = Contact::find($id);
-        $product -> update([
-           'name' => $request -> name,
-           'email' => $request -> email,
-           'phone' => $request -> phon
-        ]);
 
-        return redirect('/show/' . $id);
+        $userID = Auth::id();
+        $contact = Contact::find($id);
+
+        if($userID == $contact -> user_id)
+        {
+            $contact -> update([
+                'name' => $request -> name,
+                'email' => $request -> email,
+                'phone' => $request -> phone
+             ]);
+
+            return redirect('/show/' . $id);
+        }
+        return redirect('404');
     }
 
     public function destroy($id)
