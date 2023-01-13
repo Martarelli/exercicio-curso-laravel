@@ -72,10 +72,15 @@ class ContactController extends Controller
 
     public function destroy($id)
     {
+        $userID = Auth::id();
         $contact = Contact::find($id);
-        $contact -> delete();
 
-        return redirect('/contacts');
+        if($userID == $contact -> user_id)
+        {
+            $contact -> delete();
+            return redirect('/contacts');
+        }
+            return redirect('404');
     }
 
 }
