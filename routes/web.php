@@ -38,8 +38,17 @@ Route::post('/places/update/{id}', [PlaceController::class, 'update']);
 Route::get('/places/delete/{id}', [PlaceController::class, 'delete']);
 
 //EXERCICIO CONTACT
-Route::get('/contacts', [ContactController::class, 'contacts']);
-Route::get('/contacts/create', [ContactController::class, 'create']);
-Route::post('/contacts/store', [ContactController::class, 'store']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/contacts', [ContactController::class, 'contacts']);
+    Route::get('/contacts/create', [ContactController::class, 'create']);
+    Route::post('/contacts/store', [ContactController::class, 'store']);
+});
 
 
+
+//Rotas de autenticação
+Route::get('/login', [UserController::class, 'login']) -> name('login');
+Route::post('/signin', [UserController::class, 'signin']);
+Route::get('/register', [UserController::class, 'register']);
+Route::post('/signup', [UserController::class, 'signup']);
+Route::get('/logout', [UserController::class, 'logout']);
