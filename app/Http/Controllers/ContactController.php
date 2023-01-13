@@ -43,7 +43,7 @@ class ContactController extends Controller
         {
            return view('contact.show', compact('contact'));
         }
-            return redirect('pagina404');
+            return abort(404);
 
     }
 
@@ -56,7 +56,7 @@ class ContactController extends Controller
         {
            return view('contact.edit', compact('contact'));
         }
-        return redirect('pagina404');
+        return  abort(404);
     }
 
     public function update(Request $request, $id)
@@ -75,7 +75,7 @@ class ContactController extends Controller
 
             return redirect('/show/' . $id);
         }
-        return redirect('/pagina404');
+        return abort(404);
     }
 
     public function destroy($id)
@@ -88,7 +88,7 @@ class ContactController extends Controller
             $contact -> delete();
             return redirect('/contacts');
         }
-            return redirect('404');
+        return abort(404);
     }
 
 }
