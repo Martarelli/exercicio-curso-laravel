@@ -48,9 +48,14 @@ class ContactController extends Controller
 
     public function edit($id)
     {
-        $product = Product::find($id);
+        $userID = Auth::id();
+        $contact = Contact::find($id);
 
-        return view('products.edit', compact('product'));
+        if($userID == $contact -> user_id)
+        {
+           return view('contact.edit', compact('contact'));
+        }
+            return redirect('404');
     }
 
     public function update(Request $request, $id)

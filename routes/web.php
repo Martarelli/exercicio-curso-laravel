@@ -44,6 +44,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/contacts/create', [ContactController::class, 'create']);
     Route::post('/contacts/store', [ContactController::class, 'store']);
     Route::get('/contacts/show/{id}', [ContactController::class, 'show']);
+    Route::get('/contacts/edit/{id}', [ContactController::class, 'edit']);
+    Route::post('/contacts/update', [ContactController::class, 'update']);
+
+
+
 });
 
 
