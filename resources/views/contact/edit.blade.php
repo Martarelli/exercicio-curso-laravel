@@ -15,7 +15,7 @@
         <input type="text" name="phone" value="{{$contact -> phone}}" placeholder="Digite o telefone...">
         <button type="submit">Enviar</button>
     </form>
-    <form action="/contacts/destroy/{{$contact -> id}}" method="get">
+    <form action="/contacts/destroy/{{$contact -> id}}" method="post">
         @csrf
         <button type="submit">Deletar</button>
     </form>
