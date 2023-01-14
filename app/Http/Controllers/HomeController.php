@@ -42,8 +42,8 @@ class HomeController extends Controller
 
     public function clientes ()
     {
-        $clientes = ['Renan', 'Prof'];
+        $names = ['Renan', 'Prof'];
 
-        return view('clients', compact('clientes'));
+        return view('clients', compact('names'));
     }
 }
