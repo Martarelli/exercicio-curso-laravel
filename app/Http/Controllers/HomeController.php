@@ -39,4 +39,11 @@ class HomeController extends Controller
             return view('calcular', compact('resultado'));
         }
     }
+
+    public function hello ()
+    {
+        $name = 'Renan';
+
+        return view('hello', compact('name'));
+    }
 }
