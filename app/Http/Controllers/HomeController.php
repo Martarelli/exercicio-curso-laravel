@@ -40,10 +40,10 @@ class HomeController extends Controller
         }
     }
 
-    public function dbz ()
+    public function clientes ()
     {
-        $energy = 80;
+        $clientes = ['Renan', 'Prof'];
 
-        return view('dbz', compact('energy'));
+        return view('clientes', compact('clientes'));
     }
 }

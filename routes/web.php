@@ -16,7 +16,7 @@ use App\Http\Controllers\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomeController::class, 'dbz']);
+Route::get('/', [HomeController::class, 'clientes']);
 
 //EXERCICIO POKEMON
 Route::get('/pokemon/{nome}', [HomeController::class, 'pokemon']);
