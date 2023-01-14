@@ -40,10 +40,10 @@ class HomeController extends Controller
         }
     }
 
-    public function hello ()
+    public function dbz ()
     {
-        $name = 'Renan';
+        $energy = 80;
 
-        return view('hello', compact('name'));
+        return view('dbz', compact('energy'));
     }
 }
