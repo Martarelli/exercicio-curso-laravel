@@ -44,6 +44,6 @@ class HomeController extends Controller
     {
         $clientes = ['Renan', 'Prof'];
 
-        return view('clientes', compact('clientes'));
+        return view('clients', compact('clientes'));
     }
 }
