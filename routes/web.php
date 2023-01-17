@@ -50,7 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 //EXERCICIOS DOCUMENTOS
 Route::post('/photo', [DocumentsController::class, 'storePhoto']);
-Route::post('/images', [DocumentsController::class, 'storeImage']);Route::post('/document', [DocumentsController::class, 'store']);
+Route::post('/images', [DocumentsController::class, 'storeImage']);Route::post('/document', [DocumentsController::class, 'storeDocument']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
