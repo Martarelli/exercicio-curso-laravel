@@ -19,8 +19,20 @@ class DocumentsController extends Controller
         return redirect('/');
     }
 
-    public function storeImage(Request $request) {
+    public function storeImage(Request $request)
+    {
+
         $request->image1->storeAs('/public/images', 'file1.jpg');
         $request->image2->storeAs('/public/images', 'file2.jpg');
+
+    }
+
+    public function storeDocument(Request $request)
+    {
+
+        $name = $request->file->name;
+
+        $request->file->storeAs('/public/documents', $name);
+
     }
 }
