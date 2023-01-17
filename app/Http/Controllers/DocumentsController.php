@@ -15,7 +15,7 @@ class DocumentsController extends Controller
     public function store(Request $request)
     {
         $name = 'file.png';
-        $request->file->storeAs('/public', $name);
+        $request->file->storeAs('public', $name);
 
 
         return redirect('/');
