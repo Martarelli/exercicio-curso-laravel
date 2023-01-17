@@ -12,11 +12,15 @@ class DocumentsController extends Controller
         return view('documents.create');
     }
 
-    public function store(Request $request)
+    public function storePhoto(Request $request)
     {
-
         $request->photo->storeAs('/public', 'file.jpg');
 
         return redirect('/');
+    }
+
+    public function storeImage(Request $request) {
+        $request->image1->storeAs('/public/images', 'file1.jpg');
+        $request->image2->storeAs('/public/images', 'file2.jpg');
     }
 }
