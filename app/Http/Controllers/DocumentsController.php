@@ -14,7 +14,7 @@ class DocumentsController extends Controller
 
     public function store(Request $request)
     {
-        Storage::put('public/file.jpg', $request->photo);
+        Storage::put('public', $request->photo);
 
         return redirect('/');
     }
