@@ -49,8 +49,8 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 //EXERCICIOS DOCUMENTOS
-Route::get('/photo', [DocumentsController::class, 'create']);
-Route::post('/photo/store', [DocumentsController::class, 'store']);
+Route::post('/photo', [DocumentsController::class, 'store']);
+
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
