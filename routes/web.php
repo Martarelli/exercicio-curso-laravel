@@ -47,7 +47,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/contacts/delete/{id}', [ContactController::class, 'destroy']);
 });
 
-
+//EXERCICIOS DOCUMENTOS
+Route::get('/photo', [DocumentsController::class, 'create']);
+Route::post('/photo/store', [DocumentsController::class, 'store']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
