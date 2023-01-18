@@ -13,4 +13,11 @@ class LoggerController extends Controller
 
         return $soma;
     }
+    public function getSubt ($num1, $num2)
+    {
+        $subt = $num1 + $num2;
+        logger()->debug('Sub feita', compact('num1', 'num2', 'subt'));
+
+        return $subt;
+    }
 }
