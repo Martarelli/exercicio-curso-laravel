@@ -65,6 +65,10 @@ Route::get('/clients/bills/{client}', [BillController::class, 'getBills']);
 Route::get('/bills/expensive/{value}', [BillController::class, 'getExpensive']);
 Route::get('/bills/between/{value1}/{value2}', [BillController::class, 'getBetween']);
 
+//EXERCICIOS LOGGER
+Route::get('/soma/{num1}/{num2}', [LoggerController::class, 'getSoma']);
+
+
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
 Route::post('/signin', [UserController::class, 'signin']);
