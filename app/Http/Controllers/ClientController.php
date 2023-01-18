@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
-    public function store(Request $request){
+    public function storeClient(Request $request){
         Client::create([
             'name'=>$request->name,
             'email'=>$request->email,
@@ -16,5 +16,12 @@ class ClientController extends Controller
         ]);
 
         return redirect('/');
+    }
+
+    public function getClient($id){
+
+        $client = Client::find($id);
+
+        return response()->json($client);
     }
 }

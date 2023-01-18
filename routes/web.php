@@ -55,7 +55,8 @@ Route::post('/images', [DocumentsController::class, 'storeImage']);
 Route::post('/document', [DocumentsController::class, 'storeDocument']);
 
 //EXERCICIO ELOQUENT
-Route::post('/clients/store', [ClientController::class, 'store']);
+Route::post('/clients/store', [ClientController::class, 'storeClient']);
+Route::get('/clients/show/{client}', [ClientController::class, 'getClient']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
