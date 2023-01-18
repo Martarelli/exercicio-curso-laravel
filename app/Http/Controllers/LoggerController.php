@@ -16,10 +16,11 @@ class LoggerController extends Controller
     public function getSubt ($num1, $num2)
     {
         $subt = $num1 - $num2;
-        logger()->debug('Sub feita', compact('num1', 'num2', 'subt'));
+        logger()->debug('Sub feita', ['num1' => $num1, 'num2' => $num2, 'sub' => $subt]);
 
         return $subt;
     }
+
     public function getDiv ($num1, $num2)
     {
         if ($num2 == 0) {
