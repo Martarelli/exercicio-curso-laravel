@@ -70,6 +70,7 @@ Route::get('/bills/between/{value1}/{value2}', [BillController::class, 'getBetwe
 Route::get('/soma/{num1}/{num2}', [LoggerController::class, 'getSoma']);
 Route::get('/sub/{num1}/{num2}', [LoggerController::class, 'getSubt']);
 Route::get('/div/{num1}/{num2}', [LoggerController::class, 'getDiv']);
+Route::get('/mult/{num1}/{num2}', [LoggerController::class, 'getMult']);
 
 
 //Rotas de autenticação
