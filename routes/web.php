@@ -62,6 +62,7 @@ Route::get('/clients/name/{name}', [ClientController::class, 'getName']);
 Route::get('/clients/search/{text}', [ClientController::class, 'getSearch']);
 Route::get('/clients/bills/{client}', [BillController::class, 'getBills']);
 Route::get('/bills/expensive/{value}', [BillController::class, 'getExpensive']);
+Route::get('/bills/between/{value1}/{value2}', [BillController::class, 'getBetween']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
