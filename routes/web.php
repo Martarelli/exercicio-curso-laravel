@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BillController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlaceController;
@@ -59,6 +60,7 @@ Route::post('/clients/store', [ClientController::class, 'storeClient']);
 Route::get('/clients/show/{client}', [ClientController::class, 'getClient']);
 Route::get('/clients/name/{name}', [ClientController::class, 'getName']);
 Route::get('/clients/search/{text}', [ClientController::class, 'getSearch']);
+Route::get('/clients/bills/{client}', [BillController::class, 'getBills']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
