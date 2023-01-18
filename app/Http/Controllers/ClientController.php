@@ -34,7 +34,7 @@ class ClientController extends Controller
 
     public function getSearch($text){
 
-        $client = Client::where('name', '=', '%$text%' )->first();
+        $client = Client::where('name', 'LIKE', $text )->get();
 
         return response()->json($client);
     }
