@@ -23,7 +23,7 @@ class BillController extends Controller
         return response()->json($bills);
     }
 
-    public function getExpensive($value1, $value2){
+    public function getBetween($value1, $value2){
 
         $bills = Bill::where([['value', '>', $value1],['value', '<', $value2]])->get();
 
