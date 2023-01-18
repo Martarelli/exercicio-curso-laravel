@@ -21,8 +21,8 @@ return new class extends Migration
             $table->float('value');
             $table->foreignId('client_id');
 
-            $table->timestamps('due_date')->nullable();
-            $table->timestamps('payment_date')->nullable();
+            $table->timestamps('due_date')->nullable(true);
+            $table->timestamps('payment_date')->nullable(true);
 
             $table->timestamps();
         });
