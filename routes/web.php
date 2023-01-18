@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PlaceController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DocumentsController;
 
@@ -50,7 +51,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 //EXERCICIOS DOCUMENTOS
 Route::post('/photo', [DocumentsController::class, 'storePhoto']);
-Route::post('/images', [DocumentsController::class, 'storeImage']);Route::post('/document', [DocumentsController::class, 'storeDocument']);
+Route::post('/images', [DocumentsController::class, 'storeImage']);
+Route::post('/document', [DocumentsController::class, 'storeDocument']);
+
+//EXERCICIO ELOQUENT
+Route::post('/clients/store', [ClientController::class, 'store']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
