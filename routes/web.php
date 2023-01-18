@@ -58,6 +58,7 @@ Route::post('/document', [DocumentsController::class, 'storeDocument']);
 Route::post('/clients/store', [ClientController::class, 'storeClient']);
 Route::get('/clients/show/{client}', [ClientController::class, 'getClient']);
 Route::get('/clients/name/{name}', [ClientController::class, 'getName']);
+Route::get('/clients/search/{text}', [ClientController::class, 'getSearch']);
 
 //Rotas de autenticação
 Route::get('/login', [UserController::class, 'login']) -> name('login');
