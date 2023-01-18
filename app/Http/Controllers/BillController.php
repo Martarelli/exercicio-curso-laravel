@@ -15,4 +15,10 @@ class BillController extends Controller
 
         return response()->json($bills);
     }
+    public function getExpensive($value){
+
+        $bills = Bill::where('value', '>', $value)->get();
+
+        return response()->json($bills);
+    }
 }
