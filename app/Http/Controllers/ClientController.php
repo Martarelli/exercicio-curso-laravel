@@ -42,7 +42,7 @@ class ClientController extends Controller
 
     public function getSearch($text){
 
-        Log::info('PARAMETRO DA FUNÇÃO -> '.$text);
+
 
         $client = Client::where('name', 'LIKE', '%'.$text.'%' )->get();
 
