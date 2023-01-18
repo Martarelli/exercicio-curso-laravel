@@ -25,6 +25,13 @@ class ClientController extends Controller
         return response()->json($client);
     }
 
+    public function getOrdered($id){
+
+        $client = Client::orderBy('name', 'asc')->limit(2)->get();
+
+        return response()->json($client);
+    }
+
     public function getName($name){
 
         $client = Client::where('name', '=', $name)->first();
