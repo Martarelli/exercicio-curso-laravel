@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ClientController extends Controller
 {
@@ -40,6 +41,8 @@ class ClientController extends Controller
     }
 
     public function getSearch($text){
+
+        Log::info('PARAMETRO DA FUNÇÃO -> '.$text);
 
         $client = Client::where('name', 'LIKE', '%'.$text.'%' )->get();
 
